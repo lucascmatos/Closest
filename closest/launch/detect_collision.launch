@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<launch>  
+  <node pkg="nodelet" type="nodelet" name="pcl_manager" args="manager" output="screen" />
+  
+  <!--Use this to filter the pointcloud-->
+  <!-- Run a VoxelGrid filter to clean NaNs and downsample the data 
+  <node pkg="nodelet" type="nodelet" name="voxel_grid" args="load pcl/VoxelGrid pcl_manager" output="screen">
+    <remap from="~input" to="/os1_cloud_node/points"/>
+    <rosparam>
+      filter_field_name: z            
+      filter_limit_min: -0.20
+      filter_limit_max: 1.5
+      filter_limit_negative: False
+      leaf_size: 0.02
+    </rosparam>
+  </node>
+  -->
+  
+   <!--Run a StatisticalOutlierRemoval to clean the data from point cloud
+   <node pkg="nodelet" type="nodelet" name="statistical_outlier_removal" args="load pcl/StatisticalOutlierRemoval pcl_manager" output="screen">
+    <remap from="~input" to="/os1_cloud_node/points" />
+    <rosparam>
+      mean_k: 50
+      stddev: 2.0
+      negative: False
+    </rosparam>
+  </node>  
+  -->
+  <!--
+  <node pkg="nodelet" type="nodelet" name="radius_outlier_removal" args="load pcl/RadiusOutlierRemoval pcl_manager" output="screen">
+  <remap from="~input" to="/os1_cloud_node/points" />
+  <rosparam>
+      radius_search: 0.1
+      min_neighbors: 5
+  </rosparam>
+  </node>
+  -->
+
+
+
+  <param name = "diference_limit" value = "0.05" type="double" />  
+  <param name = "angle_limit" value = "30" type="double" />
+  <param name = "surface_points_limit" value = "5" type="int"/>  
+  <param name = "distance_yellow" value ="1.3" type="double"/>
+  <param name = "distance_red" value = "1.0" type= "double"/>  
+  <node pkg = "closest" type="closest_node" name="detect_colision" output ="screen">  
+   
+  </node>
+
+</launch>
