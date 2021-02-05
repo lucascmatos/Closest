@@ -27,5 +27,4 @@ The collision in package will publish the following topics:
 
 **Launch Files**
 
-To run the part of the packege responsable for detect collision you need to run the launch file:
-- `detect_collision.launch`: This launch runs the code for 3D collision points, and publish messages on the topics showed above, `/collision_status`, `/closest_point` and `/closest_point_make`. To run it correctly you must change de model in the configuration file for '3D'
+To run the part of the packege responsable for detect collision you need to run the launch file`detect_collision.launch`. This launch runs the code for 3D collision points, and publish messages on the topics showed above, `/collision_status`, `/closest_point` and `/closest_point_make`. To run it correctly you must change de model in the configuration file for '3D'
