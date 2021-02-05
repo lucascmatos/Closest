@@ -13,11 +13,11 @@ This repositry contains the packege for detect collision and publish the closest
 First of all, if any modification is needed in the distance of collision, angle of the objects for collision classification, or number of points to filter the surface of objetcts you can do that on launch file `detect_collision.launch` located in `/closest/launch`.  
 
 Inside this file, there are five parameters that can be modified:
-        1. diference_limit: Is the diference of the distance between two points calculated using only the coordenates x and y.
-        2. angle_limit: Is the angle limit of the surface to classified an object as representing risk of collision or not.
-        3. surface_points_limit: Is the number of adjacent points of an object surface that need to be classified as collision point to the algorithm return the                                    oject as an obstacle.
-        4. distance_yellow: Is the minimum distance that an object needs to be with respect to the robot to emit a yellow warning.
-        5. distance_red: Is the minimum distance that an object needs to be with respect to the robot to emit a red warning.
+        * diference_limit: Is the diference of the distance between two points calculated using only the coordenates x and y.
+        * angle_limit: Is the angle limit of the surface to classified an object as representing risk of collision or not.
+        * surface_points_limit: Is the number of adjacent points of an object surface that need to be classified as collision point to the algorithm return the                                    oject as an obstacle.
+        * distance_yellow: Is the minimum distance that an object needs to be with respect to the robot to emit a yellow warning.
+        * distance_red: Is the minimum distance that an object needs to be with respect to the robot to emit a red warning.
 
 **Topics**
 
