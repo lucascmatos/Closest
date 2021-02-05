@@ -7,10 +7,8 @@ This repositry contains the packege for detect collision and publish the closest
     2. Which is numbered
 2. Which is numbered
 
-* Bullet list
-    * Nested bullet
-        * Sub-nested bullet etc
-* Bullet list item 2
+* diference_limit: Is the diference of the distance between two points calculated using only the coordenates x and y.
+    
  
 
 ## Scripts included on this package:
